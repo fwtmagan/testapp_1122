@@ -11,10 +11,12 @@ import Dashboard from './Dashboard';
 import NotMatch from './NotMatch';
 import Footer from './footer';
 import Navigation from './nav';
+import slideImg1 from "./img/_01s.png";
 
 function App() {
   return (
     <div className="App">
+      <img src={slideImg1} className="site-logo" alt="logo" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigation />}>

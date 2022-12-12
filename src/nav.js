@@ -1,4 +1,3 @@
-import slideImg1 from "./img/_01s.png";
 import {
     Link,
     Outlet
@@ -7,7 +6,7 @@ import {
 function Navigation() {
     return (
       <div>
-        <img src={slideImg1} className="site-logo" alt="logo" />
+        
         <nav>
           <ul>
             <li><Link to="/">HOME</Link></li>

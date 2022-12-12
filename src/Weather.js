@@ -1,8 +1,8 @@
 // const [data, setData] = useState([]);
 
 function Weather() {
-  function handleChange(){
-    
+  function handleChange(event){
+    alert(event.target.value);
   }
   return (
     <>
