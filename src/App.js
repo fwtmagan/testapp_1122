@@ -8,7 +8,7 @@ import './index.css';
 import Home from './Home';
 import Weather from './Weather';
 import Dashboard from './Dashboard';
-import NotMatch from './NotMatch';
+import Alert from './Alert';
 import Footer from './footer';
 import Navigation from './nav';
 import slideImg1 from "./img/_01s.png";
@@ -23,7 +23,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="weather" element={<Weather />} />
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="*" element={<NotMatch />} />
+            <Route path="*" element={<Alert />} />
           </Route>
         </Routes>
         <Footer />
