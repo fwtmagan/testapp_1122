@@ -6,7 +6,6 @@ import {
 function Navigation() {
     return (
       <div>
-        
         <nav>
           <ul>
             <li><Link to="/">HOME</Link></li>
