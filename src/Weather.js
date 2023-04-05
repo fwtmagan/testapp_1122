@@ -1,8 +1,8 @@
-import './App.css';
-import { useEffect, useState, useCallback } from 'react';
+import "./App.css";
+import { useEffect, useState, useCallback } from "react";
 
 const App = () => {
-  return <Weather></Weather>
+  return <Weather></Weather>;
 };
 
 const Weather = () => {
@@ -21,27 +21,25 @@ const Weather = () => {
     // 必要なデータだけをsetData()で抜き出してステートに保存する
     setData(jsondata[0].timeSeries[0].areas[0]);
     setLoading(false);
-  }, [city])
+  }, [city]);
   const handleChange = (event) => {
     setCitycode(event.target.value);
     setLoading(true);
-  }
+  };
   useEffect(() => {
     // コンポーネントが描画されてから実行するためuseEffectを使用する
     queryWeather();
   }, [city, queryWeather]);
   let weatherInfo;
   if (loading) {
-    weatherInfo = <p>Loading</p>
+    weatherInfo = <p>Loading</p>;
   } else {
     weatherInfo = (
       <>
-        <p>
-          {data.area.name} 明日の天気
-        </p>
-        <p>
-          {data.weathers[0]}
-        </p>
+        <p>{data.area.name} 明日の天気</p>
+        <p>{data.weathers[0]}</p>
+        <p>{data.area.name} 明後日の天気</p>
+        <p>{data.weathers[1]}</p>
       </>
     );
   }
@@ -56,7 +54,7 @@ const Weather = () => {
       </select>
       {weatherInfo}
     </>
-  )
-}
+  );
+};
 
 export default App;
